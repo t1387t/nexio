@@ -1,0 +1,268 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html, body{
+  overflow-x:hidden;
+}
+
+body{
+  font-family:"Inter", sans-serif;
+  background:#0b0220;
+  color:#fff;
+  direction:ltr;
+  text-align:left;
+}
+
+/* Main Layout */
+.auth-page{
+  display:flex;
+  min-height:100vh;
+  width:100%;
+  overflow:hidden;
+}
+
+/* Left Side */
+.auth-left{
+  flex:1;
+  padding:40px;
+  background:radial-gradient(circle at top left,#ff8a00,#ff0057,#7b1fa2);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  min-width:0;
+}
+
+/* Right Side */
+.auth-right{
+  flex:1;
+  padding:40px;
+  background:#f5f5f7;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-width:0;
+}
+
+.auth-card{
+  background:#fff;
+  color:#222;
+  width:100%;
+  max-width:420px;
+  padding:30px;
+  border-radius:16px;
+  box-shadow:0 20px 40px rgba(0,0,0,0.12);
+}
+
+/* Logo */
+.logo-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.logo-box img {
+  width: 120px;
+  height: auto;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+  transition: transform 0.4s ease;
+}
+
+.logo-box img:hover {
+  transform: scale(1.08) rotate(3deg);
+}
+
+/* Tabs */
+.tabs{
+  display:flex;
+  background:#eee;
+  padding:4px;
+  border-radius:999px;
+  margin-bottom:20px;
+}
+
+.tab{
+  flex:1;
+  padding:10px 0;
+  border:none;
+  background:transparent;
+  cursor:pointer;
+  border-radius:999px;
+}
+
+.tab.active{
+  background:linear-gradient(135deg,#ff0057,#ff8a00);
+  color:#fff;
+}
+
+/* Forms */
+.form-slider{
+  position:relative;
+  overflow:hidden;
+  transition:height .35s ease;
+}
+
+.form-box{
+  position:absolute;
+  width:100%;
+  opacity:0;
+  transform:translateX(40px);
+  transition:.4s;
+}
+
+.form-box.active{
+  opacity:1;
+  transform:translateX(0);
+  position:relative;
+}
+
+.form-box input{
+  width:100%;
+  padding:12px;
+  border-radius:10px;
+  border:1px solid #ccc;
+  margin-bottom:14px;
+  font-size:15px;
+}
+
+/* Checkbox */
+.checkbox{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin-bottom:14px;
+  font-size:14px;
+}
+
+.checkbox input{
+  width:18px;
+  height:18px;
+}
+
+/* Primary Button */
+.primary-btn{
+  width:100%;
+  padding:12px 0;
+  border:none;
+  border-radius:999px;
+  background:linear-gradient(135deg,#7b1fa2,#ff0057);
+  color:#fff;
+  font-size:16px;
+  cursor:pointer;
+  margin-bottom:12px;
+}
+
+/* Switch Text */
+.switch-text{
+  font-size:14px;
+  margin-top:6px;
+}
+
+.switch-text .link{
+  color:#ff0057;
+  cursor:pointer;
+  text-decoration:none;
+}
+
+/* Social Login Buttons */
+.social-login{
+  margin-top:25px;
+  display:flex;
+  justify-content:center;
+  gap:18px;
+  width:100%;
+}
+
+.social{
+  width:55px;
+  height:55px;
+  border-radius:50%;
+  background:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  border:none;
+  box-shadow:0 8px 18px rgba(0,0,0,0.15);
+  transition:0.25s ease;
+}
+
+.social img{
+  width:28px;
+  height:28px;
+  transition:transform 0.4s ease;
+}
+
+.social:hover img{
+  transform:rotate(360deg);
+}
+
+.google{ background:#ffffff; }
+.facebook{ background:#1877f2; }
+.linkedin{ background:#0a66c2; }
+.twitter{ background:#1da1f2; }
+
+.facebook img,
+.linkedin img,
+.twitter img{
+  filter:brightness(0) invert(1);
+}
+
+/* Error Text */
+.error-text{
+  color:#ff3b3b;
+  font-size:13px;
+  margin-top:-8px;
+  margin-bottom:10px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 900px){
+
+  .auth-page{
+    flex-direction:column;
+    min-height:auto;
+  }
+
+  .auth-left,
+  .auth-right{
+    width:100%;
+    max-width:100%;
+    padding:20px;
+  }
+
+  .auth-right{
+    order:1;
+    background:#fff;
+  }
+
+  .auth-card{
+    width:100%;
+    max-width:380px;
+    margin:0 auto;
+    padding:24px 20px;
+  }
+
+  .social-login{
+    display:none;
+  }
+
+  .auth-left{
+    order:3;
+    padding:40px 20px;
+    text-align:center;
+    border-radius:30px 30px 0 0;
+  }
+
+  .brand h1{
+    font-size:26px;
+  }
+
+  .brand p{
+    font-size:14px;
+  }
+}

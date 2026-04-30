@@ -1,0 +1,16 @@
+Nexio – Auth UI Template
+Copyright (c) 2026 Mohammad
+
+This product is licensed for personal and commercial use in a single end product.
+
+You ARE allowed to:
+- Use this template in personal or commercial projects
+- Modify the code to fit your needs
+
+You are NOT allowed to:
+- Resell or redistribute the template as-is
+- Share the source code for free
+- Claim the design or code as your own
+- Include this template in another product for resale
+
+For extended or multiple-use licenses, please contact the author.
